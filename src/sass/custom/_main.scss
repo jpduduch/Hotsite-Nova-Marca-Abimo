@@ -1,0 +1,68 @@
+.container{
+	max-width: 335px;
+	margin: 0 auto;
+}
+
+nav{
+	width: 100%;
+	height: 49px;
+	background-color: rgba(#fff, 0.5);
+	position: absolute;
+
+	a{
+		max-width: 102px;
+		max-height: 23px;
+		display: block;
+		margin: 0 auto;
+		height: inherit;
+		// padding: 14px 0;
+	}
+
+	img{
+		margin: 14px 0;
+	}
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background-image: url("../src/img/background-default.jpg");
+	background-size: cover;
+	background-position: center;
+
+	.container{
+
+		h1{
+			padding-top: 49px;
+
+			@extend %centraliza-vertical;
+			max-width: 335px;
+		}
+	}
+}
+
+section{
+	padding: 40px 0;
+
+	img{
+		margin-bottom: 40px;
+		padding: 0 !important;
+	}
+
+	&#diretrizes-estrategicas{
+		background-color: $azul-abimo-alt;
+
+		h2{
+			color: $amarelo-abimo;
+		}
+
+		h3{
+			@extend .col, .s12;
+			padding: 0 !important;
+		}
+	}
+
+
+}
+
+// cmd shift espaço seleciona conteúdo de bloco de código

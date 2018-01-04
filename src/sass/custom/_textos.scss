@@ -1,0 +1,46 @@
+*, html, body{
+	font-family: OpenSans;
+	font-weight: $regular;
+	color: $cinza-abimo;
+	font-size: 16px;
+	line-height: 28px;
+	// &::-moz-selection { background-color: rgba($amarelo-sc, 0.5) !important; }
+	// &::selection { background-color: rgba($amarelo-sc, 0.5) !important; }
+}
+
+h1,h2,h3,h4,h5,h6, p, a, small, span, div, strong {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: geometricPrecision;
+}
+
+h1{
+	font-family: Gotham, OpenSans, Helvetica, Arial, Sans-serif;
+	font-weight: $bold;
+	color: #fff;
+
+	font-size: 34px;
+	line-height: 48px;
+}
+
+h2{
+	font-family: OpenSans, Helvetica, Arial, Sans-serif;
+	font-weight: $extra-bold;
+	color: $azul-abimo;
+	font-size: 35px;
+	text-transform: uppercase;
+	line-height: 40px;
+}
+
+h3{
+	color: $branco-abimo;
+	font-weight: $semi-bold;
+}
+
+p{
+	margin-top: 28px;
+}
+
+strong{
+	font-weight: $bold;
+}

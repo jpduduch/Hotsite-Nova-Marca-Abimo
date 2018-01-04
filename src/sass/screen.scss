@@ -3,4 +3,24 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@charset "UTF-8"; 
 @import "compass/reset";
+@import "compass/css3";
+
+@import "custom/variaveis-e-mixins";
+
+@import "custom/utilitarios";
+@import "custom/fonts";
+@import "custom/textos";
+@import "custom/main";
+
+@import "components/swiper";
+
+// ajustes principais
+
+html {
+ box-sizing: border-box;
+ font-size: 16px;
+ line-height: 28px;
+ letter-spacing: 0.4px;
+}
