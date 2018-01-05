@@ -1,48 +1,106 @@
+body{
+	overflow-x: hidden;
+}
+
 .container{
-	max-width: 335px;
+	max-width: 367px;
 	margin: 0 auto;
-}
+	height: 100%;
+	position: relative;
+	padding: 16px;
 
-nav{
-	width: 100%;
-	height: 49px;
-	background-color: rgba(#fff, 0.5);
-	position: absolute;
-
-	a{
-		max-width: 102px;
-		max-height: 23px;
-		display: block;
-		margin: 0 auto;
-		height: inherit;
-		// padding: 14px 0;
+	@media #{$medium-and-up}{
+		max-width: 708px;
 	}
 
-	img{
-		margin: 14px 0;
+	@media #{$large-and-up} {
+		max-width: 1296px;
+		padding-left: 32px;
+		padding-right: 32px;
 	}
 }
+
 
 header{
 	width: 100%;
 	height: 100vh;
+	max-height: 720px;
+	min-height: 667px;
 	background-image: url("../src/img/background-default.jpg");
 	background-size: cover;
 	background-position: center;
+	
+	nav{
+		width: 100%;
+		background-color: rgba(#fff, 0.5);
+		position: absolute;
+
+		padding: 14px 0;
+
+		@media #{$medium-and-up} {
+			padding: 28px 0;
+		}
+
+		a{
+			width: 27.2%;
+			display: grid;
+			margin: 0 auto;
+			height: inherit;
+			max-width: 154px;
+		}
+	}
 
 	.container{
 
 		h1{
 			padding-top: 49px;
-
 			@extend %centraliza-vertical;
-			max-width: 335px;
+			// max-width: inherit;
+			// max-height: inherit;
+			@media #{$large-and-up} {
+				width: calc(100% - 64px);
+			}
 		}
+
 	}
 }
 
 section{
 	padding: 40px 0;
+
+	&#desafio{
+		position: relative;
+
+		.o-estilizado{
+			// background-image: url("../src/img/o-estilizado.svg");
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			position: absolute;
+			top: -50%;
+			right: -250px;
+			mix-blend-mode: multiply;
+			opacity: 0.5;
+			z-index: 1;
+
+			@media #{$small-and-down} {
+				display: none;
+			}
+
+			@media #{$large-and-up} {
+				transform: scale(1.64);
+				top: -80%;
+			}
+		}
+
+		#conteudo{
+			padding: 0;
+		}
+
+	}
+
+	&:last-child{
+		padding-bottom: 0;
+	}
 
 	img{
 		margin-bottom: 40px;
@@ -57,12 +115,54 @@ section{
 		}
 
 		h3{
-			@extend .col, .s12;
 			padding: 0 !important;
 		}
 	}
 
-
+	&#proposito-discurso{
+		p{
+			margin-top: 9px;
+			margin-bottom: 40px;
+		}
+	}
 }
 
+.container-botoes{
+    width: calc(100% + 32px);
+    margin-left: -16px;
+}
+
+.button{
+	display: inline-block;
+	background-color: $azul-abimo;
+	padding: 16px 0px !important;
+	margin-bottom: 40px;
+	text-decoration: none;
+	font-size: 18px;
+	color: $branco-abimo;
+	text-align: center;
+	width: 100%;
+
+	@extend %truncate;
+}
+
+footer{
+	background-color: $azul-abimo;
+
+	@media #{$large-and-up} {
+		
+	}
+	
+	a{
+		max-width: 81px;
+		display: grid;
+		margin: 0 auto;
+		height: inherit;
+
+		@media #{$large-and-up} {
+			margin-left: auto;
+			margin-right: 12.5%;
+		}
+	}
+}
 // cmd shift espaço seleciona conteúdo de bloco de código
