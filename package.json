@@ -1,0 +1,22 @@
+{
+  "name": "hotsite-abimo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "bin": {
+    "hotsite-abimo": "script.min.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpduduch/Hotsite-Nova-Marca-Abimo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpduduch/Hotsite-Nova-Marca-Abimo/issues"
+  },
+  "homepage": "https://github.com/jpduduch/Hotsite-Nova-Marca-Abimo#readme"
+}
