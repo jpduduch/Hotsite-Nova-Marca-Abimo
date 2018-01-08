@@ -1,0 +1,17 @@
+#diretrizes-estrategicas{
+	.container-slider{
+		display: flex;
+		flex-wrap: no-wrap;
+		overflow: scroll;
+		justify-content: center;
+
+		h3{
+			width: 25%;
+			// margin-right: 32px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+}
