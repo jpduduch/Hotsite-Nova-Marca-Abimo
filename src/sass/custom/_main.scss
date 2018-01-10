@@ -15,6 +15,7 @@ body{
 
 	@media #{$large-and-up} {
 		max-width: 1296px;
+		padding: 0;
 		padding-left: 32px;
 		padding-right: 32px;
 	}
@@ -112,6 +113,7 @@ section{
 
 		h2{
 			color: $amarelo-abimo;
+			margin-bottom: 45px;
 		}
 
 		h3{
@@ -142,14 +144,17 @@ section{
 	color: $branco-abimo;
 	text-align: center;
 	width: 100%;
+	border: 1px solid $azul-abimo;
 
 	@extend %truncate;
 }
 
 footer{
 	background-color: $azul-abimo;
+	padding: 19px / 2;
 
 	@media #{$large-and-up} {
+		padding: 16px;
 		
 	}
 	

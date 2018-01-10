@@ -1,0 +1,9 @@
+.button{
+	transition: .1s;
+
+	&:hover{
+		background-color: transparent;
+		// border: 1px solid $azul-abimo;
+		color: $azul-abimo;
+	}
+}
