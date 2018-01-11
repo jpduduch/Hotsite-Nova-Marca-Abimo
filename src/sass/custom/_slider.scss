@@ -1,17 +1,42 @@
 #diretrizes-estrategicas{
-	.container-slider{
-		display: flex;
-		flex-wrap: no-wrap;
-		overflow: scroll;
-		justify-content: center;
+	// .container-slider{
+	// 	display: flex;
+	// 	flex-wrap: no-wrap;
+	// 	overflow: scroll;
+	// 	justify-content: center;
 
-		h3{
-			width: 25%;
-			// margin-right: 32px;
+	// }
+}
+h3{
+	width: 231px;
+	// margin-right: 32px;
+	position: relative;
+	display: inline-block;
+	vertical-align: text-top;
 
-			&:last-child{
-				margin-right: 0;
-			}
+	&:last-child{
+		margin-right: 0;
+	}
+
+	&:after{
+		position: absolute;
+		display: block;
+		color: #0a3655;
+		font-size: 116px*2;
+		font-weight: $bold;
+		z-index: -1;
+		top: 25px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@for $i from 1 through 7 {
+		&:nth-child(#{$i}):after{
+			content: "#{$i}";
 		}
 	}
+}
+
+.swiper-container{
+	overflow: visible !important;
 }
