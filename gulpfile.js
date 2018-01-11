@@ -20,7 +20,7 @@ gulp.task('concatenar e minificar', function(){
 	gulp.src(files)
 		.pipe(concat('./bin'))
 		.pipe(rename('script.min.js'))
-		// .pipe(uglify()) desativado temporariamente para verificação do arquivo final. ativar ao terminar.
+		// .pipe(uglify()) desativado temporariamente para verificação do arquivo final. ativar ao terminar
 		.pipe(gulp.dest('./bin'));
 });
 
