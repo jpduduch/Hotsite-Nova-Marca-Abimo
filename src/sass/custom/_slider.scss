@@ -8,17 +8,13 @@
 	// }
 }
 h3{
-	width: 231px;
-	// margin-right: 32px;
-	position: relative;
-	display: inline-block;
-	vertical-align: text-top;
+
 
 	&:last-child{
 		margin-right: 0;
 	}
 
-	&:after{
+	&:before{
 		position: absolute;
 		display: block;
 		color: #0a3655;
@@ -31,11 +27,12 @@ h3{
 	}
 
 	@for $i from 1 through 7 {
-		&:nth-child(#{$i}):after{
+		&:nth-child(#{$i}):before{
 			content: "#{$i}";
 		}
 	}
 }
+
 
 .swiper-container{
 	overflow: visible !important;

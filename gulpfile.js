@@ -4,7 +4,11 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 
-var files = "./src/js/*.js";
+// dispor os srcs desta forma faz com que o _main.js seja compilado por último
+var files = [
+	"./src/js/!(_main)*.js",
+	"./src/js/*.js"
+	];
 
 gulp.task('procurar por erros', function(){
 	gulp.src(files)
@@ -16,7 +20,7 @@ gulp.task('concatenar e minificar', function(){
 	gulp.src(files)
 		.pipe(concat('./bin'))
 		.pipe(rename('script.min.js'))
-		.pipe(uglify())
+		// .pipe(uglify()) desativado temporariamente para verificação do arquivo final. ativar ao terminar.
 		.pipe(gulp.dest('./bin'));
 });
 
