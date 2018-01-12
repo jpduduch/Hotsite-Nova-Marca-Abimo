@@ -38,4 +38,5 @@ function inicializaSwiper(){
 }
 
 window.onload = inicializaSwiper();
+// window.onresize = inicializaSwiper();
 
