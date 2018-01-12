@@ -33,7 +33,56 @@ h3{
 	}
 }
 
+// ajustes no css da biblioteca do swiper para adequar o site ao layout 
+
+$largura-coluna-no-psd: 233;
+$largura-total-no-psd: 1184;
+$margem-entre-colunas: 70;
 
 .swiper-container{
 	overflow: visible !important;
+	@media #{$medium-and-down} {
+		margin-bottom: 88px !important;
+	}
+
+	@media #{$large-and-up} {
+		.swiper-wrapper{
+			display: block;
+			text-align: center;
+			// margin-bottom: unquote((100 * -32)/993 + "vw");
+			
+			.swiper-slide{
+				width: unquote(($largura-coluna-no-psd * 100) / $largura-total-no-psd + "%");
+				margin-right: unquote(($margem-entre-colunas * 100) / $largura-total-no-psd + "%");
+				display: inline-block;
+				vertical-align: top;
+				height: 250px;
+				text-align: left;
+
+				&:nth-child(4), &:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+
+		.swiper-pagination{
+			display: none;
+		}
+	}
+
+	.swiper-pagination-bullet{
+		background-color: #fff;
+		opacity: 0.3;
+		width: 24px;
+		height: 24px;
+		margin: 0 8px !important;
+
+		&-active{
+			opacity: 1;
+		}
+	}
+
 }
+	.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+		bottom: -60px !important;
+	}

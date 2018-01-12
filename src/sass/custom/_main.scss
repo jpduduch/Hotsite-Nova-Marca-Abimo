@@ -27,7 +27,8 @@ header{
 	height: 100vh;
 	max-height: 720px;
 	min-height: 667px;
-	background-image: url("../src/img/background-default.jpg");
+	// background-image: url("../src/img/background-default.jpg");
+	background-color: $azul-abimo-alt;
 	background-size: cover;
 	background-position: center;
 	
@@ -52,10 +53,18 @@ header{
 	}
 
 	.container{
+		position: relative;
 
 		h1{
 			padding-top: 49px;
-			@extend %centraliza-vertical;
+			text-align: center;
+			width: 92%;
+			
+			// @media #{$small-and-down} {
+			// 	width: 92% !important;
+			// }
+
+			@extend %centraliza-ambos;
 			// max-width: inherit;
 			// max-height: inherit;
 			@media #{$large-and-up} {
@@ -96,16 +105,30 @@ section{
 		#conteudo{
 			padding: 0;
 		}
-
-	}
-
-	&:last-child{
-		padding-bottom: 0;
 	}
 
 	img{
 		margin-bottom: 40px;
 		padding: 0 !important;
+	}
+
+	&#proposito{
+		background-color: $azul-abimo-alt;
+
+		h2{
+			color: $amarelo-abimo;
+		}
+
+		p{
+			color: #fff;
+		}
+	}
+
+	&#discurso{
+		p{
+			margin-top: 9px;
+			margin-bottom: 40px;
+		}
 	}
 
 	&#diretrizes-estrategicas{
@@ -121,11 +144,9 @@ section{
 		}
 	}
 
-	&#proposito-discurso{
-		p{
-			margin-top: 9px;
-			margin-bottom: 40px;
-		}
+
+	&:last-child{
+		padding-bottom: 0;
 	}
 }
 
@@ -151,7 +172,7 @@ section{
 
 footer{
 	background-color: $azul-abimo;
-	padding: 19px / 2;
+	padding: (19px / 2);
 
 	@media #{$large-and-up} {
 		padding: 16px;

@@ -5,7 +5,9 @@ function inicializaSwiper(){
 			loop: false,
 
 	        // If we need pagination
-	        pagination: '.swiper-pagination',
+	        pagination: {
+				el: '.swiper-pagination',
+			},
 	        // autoplay: false,
 	        
 	        // Navigation arrows
@@ -35,6 +37,5 @@ function inicializaSwiper(){
 
 }
 
-$(document).ready(inicializaSwiper()); 
-$(window).resize(inicializaSwiper());
+window.onload = inicializaSwiper();
 
